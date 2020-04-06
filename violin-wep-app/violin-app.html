@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <img id="staff" alt="staff" usemap="#workmap">
+    <img id="neck" src="images/violin_nick-removebg.png" alt="Workplace" usemap="#workmap">
+
+    <div id="note13" class="top-level-1 rtmx" title="mi">.</div>
+    <div id="note14" class="top-level-1 rtmxb" title="la">.</div><!--_rtmxb (right max before)-->
+    <div id="note15" class="top-level-1 ltmxb" title="re">.</div><!--_ltmnb (left max before)-->
+    <div id="note16" class="top-level-1 ltmx" title="sol">.</div>
+    
+    <p class="top-level-2 finger" >1st-finger</p>
+    <div id="note1" class="top-level-2 rtmx" title="fa">.</div>
+    <div id="note2" class="top-level-2 rtmxb" title="si">.</div>
+    <div id="note3" class="top-level-2 ltmxb" title="mi">.</div>
+    <div id="note4" class="top-level-2 ltmx" title="la">.</div>
+
+    <p class="top-level-3 finger" >2nd-finger</p>
+    <div id="note5" class="top-level-3 rtmx" title="sol">.</div>
+    <div id="note6" class="top-level-3 rtmxb" title="do">.</div>
+    <div id="note7" class="top-level-3 ltmxb" title="fa">.</div>
+    <div id="note8" class="top-level-3 ltmx" title="si">.</div>
+
+    <p class="top-level-4 finger" >3rd-finger</p>
+    <div id="note9"  class="top-level-4 rtmx" title="la">.</div>
+    <div id="note10" class="top-level-4 rtmxb" title="re">.</div>
+    <div id="note11" class="top-level-4 ltmxb" title="sol">.</div>
+    <div id="note12" class="top-level-4 ltmx" title="do">.</div>
+    <p id="message"></p>
+    <p id="score"></p>
+    <hr>
+    <p><span>instructions</span><br>1- in case your answer is <strong>wrong</strong> the wrong message will keep showing until your answer is right<br>2- in case your answer is <strong>right</strong> the note place will change and the right message will be displayed</p>
+    <input id="time" type="number" max="10" min="1" placeholder="Challenge time (use arrows --->)">
+    <input id="time_btn" type="button" value="Submit time" onclick="myFunction()">
+    <input id="btn" type="button" value="a-b-c" title="change Music Notation System To Letters">
+    <input id="btn2" type="button" value="do-re-mi" title="change Music Notation System To solfege">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
