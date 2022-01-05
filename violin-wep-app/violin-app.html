@@ -11,32 +11,68 @@
     <img id="staff" alt="staff" usemap="#workmap">
     <img id="neck" src="images/violin_nick-removebg.png" alt="Workplace" usemap="#workmap">
 
-    <div id="note13" class="top-level-1 rtmx" title="mi">.</div>
-    <div id="note14" class="top-level-1 rtmxb" title="la">.</div><!--_rtmxb (right max before)-->
-    <div id="note15" class="top-level-1 ltmxb" title="re">.</div><!--_ltmnb (left max before)-->
-    <div id="note16" class="top-level-1 ltmx" title="sol">.</div>
+    <div id="E4" class="top-level-1 rtmx" title="mi">.</div>
+    <audio id="E4music" src="soundNotes/E4music.wav"></audio>
+
+    <div id="A4" class="top-level-1 rtmxb" title="la">.</div><!--_rtmxb (right max before)-->
+    <audio id="A4music" src="soundNotes/A4music.wav"></audio>
+
+    <div id="D3" class="top-level-1 ltmxb" title="re">.</div><!--_ltmnb (left max before)-->
+    <audio id="D3music" src="soundNotes/D3music.wav"></audio>
+
+    <div id="G3" class="top-level-1 ltmx" title="sol">.</div>
+    <audio id="G3music" src="soundNotes/G3music.wav"></audio>
+
     
     <p class="top-level-2 finger" >1st-finger</p>
-    <div id="note1" class="top-level-2 rtmx" title="fa">.</div>
-    <div id="note2" class="top-level-2 rtmxb" title="si">.</div>
-    <div id="note3" class="top-level-2 ltmxb" title="mi">.</div>
-    <div id="note4" class="top-level-2 ltmx" title="la">.</div>
+    <div id="F4" class="top-level-2 rtmx" title="fa">.</div>
+    <audio id="F4music" src="soundNotes/F4music.wav"></audio>
+
+    <div id="B4" class="top-level-2 rtmxb" title="si">.</div>
+    <audio id="B4music" src="soundNotes/B4music.wav"></audio>
+
+    <div id="E3" class="top-level-2 ltmxb" title="mi">.</div>
+    <audio id="E3music" src="soundNotes/E3music.wav"></audio>
+
+    <div id="A3" class="top-level-2 ltmx" title="la">.</div>
+    <audio id="A3music" src="soundNotes/A3music.wav"></audio>
+
 
     <p class="top-level-3 finger" >2nd-finger</p>
-    <div id="note5" class="top-level-3 rtmx" title="sol">.</div>
-    <div id="note6" class="top-level-3 rtmxb" title="do">.</div>
-    <div id="note7" class="top-level-3 ltmxb" title="fa">.</div>
-    <div id="note8" class="top-level-3 ltmx" title="si">.</div>
+    <div id="G5" class="top-level-3 rtmx" title="sol">.</div>
+    <audio id="G5music" src="soundNotes/G5music.wav"></audio>
+
+    <div id="C4" class="top-level-3 rtmxb" title="do">.</div>
+    <audio id="C4music" src="soundNotes/C4music.wav"></audio>
+
+    <div id="F3" class="top-level-3 ltmxb" title="fa">.</div>
+    <audio id="F3music" src="soundNotes/F3music.wav"></audio>
+
+    <div id="B3" class="top-level-3 ltmx" title="si">.</div>
+    <audio id="B3music" src="soundNotes/B3music.wav"></audio>
+
 
     <p class="top-level-4 finger" >3rd-finger</p>
-    <div id="note9"  class="top-level-4 rtmx" title="la">.</div>
-    <div id="note10" class="top-level-4 rtmxb" title="re">.</div>
-    <div id="note11" class="top-level-4 ltmxb" title="sol">.</div>
-    <div id="note12" class="top-level-4 ltmx" title="do">.</div>
+    <div id="A5"  class="top-level-4 rtmx" title="la">.</div>
+    <audio id="A5music" src="soundNotes/A5music.wav"></audio>
+
+    <div id="D4" class="top-level-4 rtmxb" title="re">.</div>
+    <audio id="D4music" src="soundNotes/D4music.wav"></audio>
+
+    <div id="G4" class="top-level-4 ltmxb" title="sol">.</div>
+    <audio id="G4music" src="soundNotes/G4music.wav"></audio>
+
+    <div id="C3" class="top-level-4 ltmx" title="do">.</div>
+    <audio id="C3music" src="soundNotes/C3music.wav"></audio>
+
     <p id="message"></p>
     <p id="score"></p>
     <hr>
-    <p><span>instructions</span><br>1- in case your answer is <strong>wrong</strong> the wrong message will keep showing until your answer is right<br>2- in case your answer is <strong>right</strong> the note place will change and the right message will be displayed</p>
+    <p>
+        <span>instructions</span>
+        <br>1- in case your answer is <strong>wrong</strong> the wrong message will keep showing until your answer is right
+        <br>2- in case your answer is <strong>right</strong> the note place will change and the right message will be displayed
+    </p>
     <input id="time" type="number" max="10" min="1" placeholder="Challenge time (use arrows --->)">
     <input id="time_btn" type="button" value="Submit time" onclick="myFunction()">
     <input id="btn" type="button" value="a-b-c" title="change Music Notation System To Letters">

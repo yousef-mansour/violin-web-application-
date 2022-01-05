@@ -2,13 +2,13 @@ msg = $("#message");
 score = 0;
 score_text = $("#score");
 var divs = document.getElementsByTagName('div');
-btn = document.getElementById('btn');//_btn holds a button element
-//_ns holds the letters notation system
+btn = document.getElementById('btn');//_btn holds a button change the notation element
+//_nsl holds the letters notation system
 nsl = ["E", "A", "D", "G", "F", "B", "E", "A", "G", "C", "F", "B", "A", "D", "G", "C"];
 btn2 = document.getElementById('btn2');//_btn holds a button element
 //_nss holds the solfeg notation system
 nss = ["mi", "la", "re", "sol", "fa", "si", "mi", "la", "sol", "do", "fa", "si", "la", "re", "sol", "do"];
-img_path = "images/notes/note-";
+img_path = "images/notes/";
 time_input = document.getElementById("time");
 time_btn = document.getElementById("time_btn");
 $("[type='number']").keypress(function (evt) {
@@ -26,11 +26,25 @@ function random_color(){
 }
 
 function rndimg(){// displaying random note
+
+//synthesising the array that holds all images
 var notes = [];
-for(var i = 1; i <= 16; i++){
-    notes.push("images/notes/note-" + i + ".png")
+var letters = ["A", "B", "C", "D", "E", "F", "G"];
+var numbers = ["3", "4"];
+
+letters.forEach(funL);
+notes.push("images/notes/A5.png");
+notes.push("images/notes/G5.png");
+function funL(letter){
+    numbers.forEach(funN)
+    function funN(number){
+        notes.push("images/notes/" + letter + number + ".png");
+    }
 }
+
+
 note = notes[Math.floor(Math.random()*notes.length)];
+console.log(note);
 random_right_msg()
 random_color()
 $(document).ready(function(){
@@ -44,13 +58,23 @@ function show_score(){score_text.text("Score : " + score)};
 function test(){  
 //validating the rest of strings   
    for(var i = 1; i <= 16; i++){
-       if((this.getAttribute("id") === "note" + i) && (note === img_path + i + ".png"))
-           {msg.text(correct_text); msg.attr("style", "background-color: " + color +";"); score += 10 ;show_score(); rndimg();break;}  
-           //wrong answer
-       if (i == 16){msg.attr("style", "background-color: #cc0000;"); msg.text("wrong");if(score != 0) {score -= 10}; show_score()}             
+       if (note === (img_path + this.getAttribute("id") + ".png")){
+           var chosenAudio = document.getElementById( this.getAttribute("id") + "music")
+           chosenAudio.play();
+           msg.text(correct_text); msg.attr("style", "background-color: " + color +";");
+           score += 10 ;
+           show_score();
+           rndimg();
+           break;
+        }else{
+            msg.attr("style", "background-color: #cc0000;");
+            msg.text("wrong");if(score != 0) {score -= 10};
+            show_score()
+        }             
 } 
 
 };
+
 
 
 //adding event listeners to all divs
